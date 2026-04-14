@@ -151,40 +151,94 @@
   </div>
 
   <!-- ContaWise ERP -->
-  <section id="contawise" class="contawise reveal">
+  <section id="contawise" class="contawise">
     <div class="contawise__grain"></div>
-    <div class="container contawise__inner">
-      <div class="contawise__text">
-        <span class="section-label section-label--light">Tecnologia exclusiva</span>
+
+    <!-- Top: Hero do produto -->
+    <div class="container contawise__hero reveal">
+      <div class="contawise__hero-text">
+        <span class="section-label section-label--light">Exclusivo para clientes Roma</span>
         <h2 class="contawise__title">ContaWise<br><span class="contawise__title--thin">ERP</span></h2>
         <div class="contawise__divider"></div>
-        <p class="contawise__desc">Gerencie sua empresa de forma integrada. Nosso ERP oferece controle financeiro, fiscal e operacional em um só lugar — direto do seu navegador.</p>
-        <a href="https://contawise.vendaerp.com.br" target="_blank" rel="noopener noreferrer" class="btn btn--gold">
-          Acessar o Sistema
-          <i data-lucide="arrow-up-right"></i>
-        </a>
+        <p class="contawise__tagline">Seu sistema de gestão pronto para usar.<br><strong style="color:var(--gold-light)">Sem instalação. Sem dor de cabeça.</strong></p>
       </div>
-      <div class="contawise__visual">
-        <div class="contawise__mockup">
-          <div class="contawise__mockup-bar">
-            <span></span><span></span><span></span>
+      <div class="contawise__browser">
+        <div class="contawise__browser-bar">
+          <div class="contawise__browser-dots"><span></span><span></span><span></span></div>
+          <div class="contawise__browser-url">
+            <i data-lucide="lock" style="width:12px;height:12px;color:var(--whatsapp);"></i>
+            <span>contawise.vendaerp.com.br</span>
           </div>
-          <div class="contawise__mockup-content">
-            <div class="contawise__mockup-sidebar">
-              <div class="contawise__mockup-item"></div>
-              <div class="contawise__mockup-item"></div>
-              <div class="contawise__mockup-item contawise__mockup-item--active"></div>
-              <div class="contawise__mockup-item"></div>
+        </div>
+        <div class="contawise__browser-body">
+          <div class="contawise__dash-header">
+            <div class="contawise__dash-logo">ContaWise</div>
+            <div class="contawise__dash-nav"><span></span><span></span><span></span><span class="active"></span></div>
+          </div>
+          <div class="contawise__dash-grid">
+            <div class="contawise__dash-card">
+              <div class="contawise__dash-card-label">Faturamento</div>
+              <div class="contawise__dash-card-value">R$ 48.520<span>,00</span></div>
+              <div class="contawise__dash-card-trend up">+12,4%</div>
             </div>
-            <div class="contawise__mockup-main">
-              <div class="contawise__mockup-chart"></div>
-              <div class="contawise__mockup-rows">
-                <div class="contawise__mockup-row"></div>
-                <div class="contawise__mockup-row"></div>
-                <div class="contawise__mockup-row"></div>
-              </div>
+            <div class="contawise__dash-card">
+              <div class="contawise__dash-card-label">Notas Emitidas</div>
+              <div class="contawise__dash-card-value">127</div>
+              <div class="contawise__dash-card-trend up">+8 este mês</div>
+            </div>
+            <div class="contawise__dash-card">
+              <div class="contawise__dash-card-label">Contas a Pagar</div>
+              <div class="contawise__dash-card-value">R$ 5.230<span>,00</span></div>
+              <div class="contawise__dash-card-trend">3 pendentes</div>
             </div>
           </div>
+          <div class="contawise__dash-chart">
+            <svg viewBox="0 0 400 80" class="contawise__chart-svg" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(201,168,76,0.3)"/>
+                  <stop offset="100%" stop-color="rgba(201,168,76,0)"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,60 C30,55 60,40 100,45 C140,50 160,25 200,20 C240,15 270,30 300,18 C330,6 360,12 400,5 L400,80 L0,80 Z" fill="url(#chartGrad)"/>
+              <path d="M0,60 C30,55 60,40 100,45 C140,50 160,25 200,20 C240,15 270,30 300,18 C330,6 360,12 400,5" fill="none" stroke="var(--gold)" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: Benefícios -->
+    <div class="contawise__benefits">
+      <div class="container">
+        <div class="contawise__benefits-grid reveal">
+          <div class="contawise__benefit reveal-item">
+            <div class="contawise__benefit-icon"><i data-lucide="file-check"></i></div>
+            <h4 class="contawise__benefit-title">Emissão de Notas</h4>
+            <p class="contawise__benefit-desc">Emita NF-e, NFS-e e NFC-e em poucos cliques, direto do navegador</p>
+          </div>
+          <div class="contawise__benefit reveal-item">
+            <div class="contawise__benefit-icon"><i data-lucide="bar-chart-3"></i></div>
+            <h4 class="contawise__benefit-title">Controle Financeiro</h4>
+            <p class="contawise__benefit-desc">Contas a pagar, receber, fluxo de caixa e conciliação bancária</p>
+          </div>
+          <div class="contawise__benefit reveal-item">
+            <div class="contawise__benefit-icon"><i data-lucide="package"></i></div>
+            <h4 class="contawise__benefit-title">Gestão de Estoque</h4>
+            <p class="contawise__benefit-desc">Controle de produtos, entradas, saídas e inventário em tempo real</p>
+          </div>
+          <div class="contawise__benefit reveal-item">
+            <div class="contawise__benefit-icon"><i data-lucide="clipboard-list"></i></div>
+            <h4 class="contawise__benefit-title">Relatórios Completos</h4>
+            <p class="contawise__benefit-desc">Relatórios gerenciais, DRE, balancetes e demonstrativos prontos</p>
+          </div>
+        </div>
+        <div class="contawise__cta reveal">
+          <p class="contawise__cta-text">Já é cliente Roma? Acesse agora mesmo.</p>
+          <a href="https://contawise.vendaerp.com.br" target="_blank" rel="noopener noreferrer" class="btn btn--gold btn--lg">
+            Acessar o ContaWise
+            <i data-lucide="arrow-up-right"></i>
+          </a>
         </div>
       </div>
     </div>
