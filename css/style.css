@@ -352,8 +352,8 @@ h1, h2, h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(170deg, rgba(10, 22, 40, 0.85) 0%, rgba(21, 44, 69, 0.75) 40%, rgba(30, 63, 99, 0.8) 100%),
-    url('../img/hero-bg.jpg') center/cover no-repeat;
+    linear-gradient(170deg, rgba(10, 22, 40, 0.82) 0%, rgba(21, 44, 69, 0.7) 40%, rgba(30, 63, 99, 0.75) 100%),
+    url('../img/roma-sucesso.jpg') center/cover no-repeat;
 }
 
 .hero__grain {
@@ -893,6 +893,121 @@ h1, h2, h3 {
   width: 1px;
   height: 50px;
   background: var(--cream-dark);
+}
+
+/* ===========================
+   CTA Banner
+   =========================== */
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.cta-banner__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 60%, var(--primary-medium) 100%);
+}
+
+.cta-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  min-height: 480px;
+}
+
+.cta-banner__photo {
+  flex: 0 0 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.cta-banner__photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  background: linear-gradient(to right, transparent, var(--primary));
+  pointer-events: none;
+}
+
+.cta-banner__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 4rem 4rem 3rem;
+  color: var(--white);
+}
+
+.cta-banner__title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.cta-banner__title--accent {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.cta-banner__desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+
+.cta-banner__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .cta-banner__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .cta-banner__photo {
+    flex: none;
+    height: 360px;
+  }
+
+  .cta-banner__photo::after {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--primary));
+  }
+
+  .cta-banner__content {
+    padding: 2.5rem 1.5rem 3rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cta-banner__actions {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* ===========================
