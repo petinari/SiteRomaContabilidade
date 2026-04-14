@@ -24,6 +24,7 @@
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max-w: 1200px;
+  --topbar-h: 32px;
   --header-h: 76px;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -39,7 +40,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-h);
+  scroll-padding-top: calc(var(--header-h) + var(--topbar-h));
 }
 
 body {
@@ -176,11 +177,65 @@ h1, h2, h3 {
 }
 
 /* ===========================
+   Top Bar
+   =========================== */
+.topbar {
+  background: var(--dark);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  padding: 0.45rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+.topbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar__text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.02em;
+}
+
+.topbar__text strong {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.topbar__contact {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.topbar__contact a {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s;
+}
+
+.topbar__contact a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .topbar__contact { display: none; }
+  .topbar__inner { justify-content: center; }
+}
+
+/* ===========================
    Header
    =========================== */
 .header {
   position: fixed;
-  top: 0;
+  top: var(--topbar-h);
   left: 0;
   right: 0;
   z-index: 1000;
